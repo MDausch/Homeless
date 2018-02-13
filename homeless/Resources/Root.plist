@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <true/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>enabled</string>
+          <key>label</key>                  <string>Enable</string>
+          <key>icon</key>                   <string>enabled.png</string>
+        </dict>
+
+        <dict>
+          <key>cell</key>                   <string>PSGroupCell</string>
+          <key>label</key>                  <string>Lockscreen:</string>
+        </dict>
+
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <true/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>lockscreenBarHidden</string>
+          <key>label</key>                  <string>Lockscreen HomeBar</string>
+          <key>icon</key>                   <string>lock.png</string>
+        </dict>
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <false/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>quickButtonsHidden</string>
+          <key>label</key>                  <string>Quick Actions</string>
+          <key>icon</key>                   <string>app.png</string>
+        </dict>
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <false/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>clockHidden</string>
+          <key>label</key>                  <string>Clock and Date</string>
+          <key>icon</key>                   <string>app.png</string>
+        </dict>
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <false/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>dateHidden</string>
+          <key>label</key>                  <string>Date only</string>
+          <key>icon</key>                   <string>app.png</string>
+        </dict>
+
+        <dict>
+          <key>cell</key>                   <string>PSGroupCell</string>
+          <key>label</key>                  <string>Other:</string>
+        </dict>
+
+
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <true/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>appBarHidden</string>
+          <key>label</key>                  <string>In App HomeBar</string>
+          <key>icon</key>                   <string>app.png</string>
+        </dict>
+
+
+
+        <dict>
+		  <key>cell</key>                   <string>PSGroupCell</string>
+		  <key>label</key>                  <string>Some changes may require a respring</string>
+		</dict>
+        <dict>
+          <key>cell</key>                    <string>PSButtonCell</string>
+          <key>label</key>                   <string>Respring</string>
+          <key>action</key>                  <string>respring</string>
+          <key>icon</key>                    <string>respring.png</string>
+
+        </dict>
+
+        <!-- Just a space in the settings -->
+        <dict>
+          <key>cell</key>                    <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+          <key>action</key>                   <string>goToGithub</string>
+          <key>cell</key>                     <string>PSButtonCell</string>
+          <key>icon</key>                     <string>github.png</string>
+          <key>label</key>     	              <string>View on Github</string>
+        </dict>
+
+        <dict>
+          <key>action</key>                   <string>goToTwitter</string>
+          <key>cell</key>                     <string>PSButtonCell</string>
+          <key>icon</key>                     <string>twitter.png</string>
+          <key>label</key>     	              <string>@M_Dausch</string>
+        </dict>
+
+	</array>
+	<key>title</key>
+	<string>Homeless</string>
+</dict>
+</plist>
