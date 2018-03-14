@@ -26,7 +26,6 @@
           <key>defaults</key>               <string>ch.mdaus.homeless</string>
           <key>key</key>                    <string>lockscreenBarHidden</string>
           <key>label</key>                  <string>Lockscreen HomeBar</string>
-          <key>icon</key>                   <string>lock.png</string>
         </dict>
         <dict>
           <key>cell</key>                   <string>PSSwitchCell</string>
@@ -35,16 +34,22 @@
           <key>defaults</key>               <string>ch.mdaus.homeless</string>
           <key>key</key>                    <string>quickButtonsHidden</string>
           <key>label</key>                  <string>Quick Actions</string>
-          <key>icon</key>                   <string>app.png</string>
         </dict>
         <dict>
           <key>cell</key>                   <string>PSSwitchCell</string>
           <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
           <key>default</key>                <false/>
           <key>defaults</key>               <string>ch.mdaus.homeless</string>
-          <key>key</key>                    <string>clockHidden</string>
+          <key>key</key>                    <string>swipeUpTextHidden</string>
+          <key>label</key>                  <string>Swipe Up Text</string>
+        </dict>
+        <dict>
+          <key>cell</key>                   <string>PSSwitchCell</string>
+          <key>PostNotification</key>       <string>ch.mdaus.homeless.settingschanged</string>
+          <key>default</key>                <false/>
+          <key>defaults</key>               <string>ch.mdaus.homeless</string>
+          <key>key</key>                    <string>clockHidden"</string>
           <key>label</key>                  <string>Clock and Date</string>
-          <key>icon</key>                   <string>app.png</string>
         </dict>
         <dict>
           <key>cell</key>                   <string>PSSwitchCell</string>
@@ -53,7 +58,6 @@
           <key>defaults</key>               <string>ch.mdaus.homeless</string>
           <key>key</key>                    <string>dateHidden</string>
           <key>label</key>                  <string>Date only</string>
-          <key>icon</key>                   <string>app.png</string>
         </dict>
 
         <dict>
@@ -69,7 +73,6 @@
           <key>defaults</key>               <string>ch.mdaus.homeless</string>
           <key>key</key>                    <string>appBarHidden</string>
           <key>label</key>                  <string>In App HomeBar</string>
-          <key>icon</key>                   <string>app.png</string>
         </dict>
 
 
@@ -82,7 +85,6 @@
           <key>cell</key>                    <string>PSButtonCell</string>
           <key>label</key>                   <string>Respring</string>
           <key>action</key>                  <string>respring</string>
-          <key>icon</key>                    <string>respring.png</string>
 
         </dict>
 

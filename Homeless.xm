@@ -18,15 +18,21 @@
 @interface SBDashBordTeachableMomentsContainterView : UIView
 @end
 
+@interface  SBDashBoardFixedFooterViewController : UIView
+@end
+
+@interface SBUILegibilityLabel : UILabel
+-(void)setString:(NSString*)arg1;
+@end
+
 
 static NSMutableDictionary *settings;
 BOOL enabled = YES;
 BOOL lockscreenBarHidden = YES;
-BOOL quickButtonsHidden = YES;
-BOOL clockHidden = YES;
-BOOL dateHidden = YES;
-
-
+BOOL quickButtonsHidden = NO;
+BOOL clockHidden = NO;
+BOOL dateHidden = NO;
+BOOL swipeUpTextHidden = NO;
 BOOL appBarHidden = YES;
 
 
@@ -38,8 +44,11 @@ void refreshPrefs() {
   if([settings objectForKey:@"quickButtonsHidden"])quickButtonsHidden = [[settings objectForKey:@"quickButtonsHidden"] boolValue];
   if([settings objectForKey:@"clockHidden"])clockHidden = [[settings objectForKey:@"clockHidden"] boolValue];
   if([settings objectForKey:@"dateHidden"])dateHidden = [[settings objectForKey:@"dateHidden"] boolValue];
+  if([settings objectForKey:@"swipeUpTextHidden"])swipeUpTextHidden = [[settings objectForKey:@"swipeUpTextHidden"] boolValue];
+
 
   if([settings objectForKey:@"appBarHidden"])appBarHidden = [[settings objectForKey:@"appBarHidden"] boolValue];
+
 }
 
 
@@ -48,6 +57,28 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 }
 
 
+/*
+%hook SBDashBoardBehavior
+
+-(void)setIdleTimerDuration:(NSInteger)arg1{
+
+    %orig(2000);
+}
+
+%end
+*/
+
+%hook SBDashBoardTeachableMomentsContainerView
+-(SBUILegibilityLabel *)callToActionLabel{
+    if(enabled && swipeUpTextHidden){
+        SBUILegibilityLabel *string = %orig;
+        [string setString:@""];
+        return(string);
+    }
+    return(%orig);
+}
+%end
+
 
 %hook MTLumaDodgePillView
 -(void)initWithFrame:(CGRect)arg1{
@@ -55,8 +86,6 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 
     if(enabled && appBarHidden)
         self.alpha = 0;
-
-
 }
 %end
 
@@ -100,6 +129,7 @@ static void PreferencesChangedCallback(CFNotificationCenterRef center, void *obs
 
 }
 %end
+
 
 %ctor {
   @autoreleasepool {
